@@ -1,5 +1,6 @@
 {
     "description": "Prompt the user to send SMS messages.\n\nThe sms module provides an API to natively prompt the user to send SMS messages with prefilled content and/or recipients", 
+    "min_platform_version": "v2.1.0", 
     "name": "sms", 
     "platform_version": "v2.1.0", 
     "version": "2.0"
