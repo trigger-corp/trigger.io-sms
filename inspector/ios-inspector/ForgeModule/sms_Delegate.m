@@ -19,10 +19,18 @@
 }
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
-	[[[ForgeApp sharedApp] viewController] dismissViewControllerHelper:^{
-		[task success:nil];
-		me = nil;
-	}];
+   	[[[ForgeApp sharedApp] viewController] dismissViewControllerHelper:^{
+            if (result == MessageComposeResultSent) {
+                [task success:nil];
+            } else if (result == MessageComposeResultCancelled) {
+                [task error:@"User cancelled SMS send" type:@"EXPECTED_FAILURE" subtype:nil];
+            } else if (result == MessageComposeResultFailed) {
+                [task error:@"SMS failed to send" type:@"UNEXPECTED_FAILURE" subtype:nil];
+            } else {
+                [task error:@"Unknown error sending SMS" type:@"UNAVAILABLE" subtype:nil];
+            }
+            me = nil;
+        }];
 }
 
 @end
