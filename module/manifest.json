@@ -3,6 +3,6 @@
 	"min_platform_version": "v2.1.0",
 	"namespace": "sms",
 	"platform_version": "v2.1.0",
-	"version": "2.1",
-	"changes": "* iOS: Fire error handler on user cancellation or send failure"
+	"version": "2.2",
+	"changes": "* Fix for SMS intent failing on Nexus 5s"
 }
