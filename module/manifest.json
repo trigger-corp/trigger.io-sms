@@ -1,8 +1,8 @@
 {
-	"description": "Prompt the user to send SMS messages.\n\nThe sms module provides an API to natively prompt the user to send SMS messages with prefilled content and/or recipients",
-	"min_platform_version": "v2.1.0",
-	"namespace": "sms",
-	"platform_version": "v2.1.0",
-	"version": "2.2",
-	"changes": "* Fix for SMS intent failing on Nexus 5s"
+    "changes": "* Support arm64 devices running iOS 8", 
+    "description": "Prompt the user to send SMS messages.\n\nThe sms module provides an API to natively prompt the user to send SMS messages with prefilled content and/or recipients", 
+    "min_platform_version": "v2.1.0", 
+    "namespace": "sms", 
+    "platform_version": "v2.2.0", 
+    "version": "2.3"
 }
